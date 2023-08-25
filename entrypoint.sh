@@ -23,10 +23,10 @@ do
 	then
 		git checkout $branch
 	else
-		git checkout -b $branch upstream/$branch
+		git checkout -b $branch 
 	fi
 	git merge upstream/$branch -m "merge upstream/$branch into $branch"
+	git push origin $branch
 done
 
-git push origin --all -u
 git push origin --tags
