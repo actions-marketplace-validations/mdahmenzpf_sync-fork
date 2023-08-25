@@ -1,4 +1,4 @@
-name: "Sync Fork Action"
+name: "Sync Fork (Branches and Tags)"
 description: "Sync changes from upstream into fork"
 author: "Marc Anton Dahmen"
 inputs:
