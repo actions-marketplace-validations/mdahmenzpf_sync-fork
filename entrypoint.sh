@@ -23,7 +23,7 @@ do
 	then
 		git checkout $branch
 	else
-		git checkout origin/$branch 
+		git checkout -t origin/$branch 
 	fi
 	git merge upstream/$branch -m "merge upstream/$branch into $branch"
 	git push origin $branch
