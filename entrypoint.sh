@@ -13,8 +13,8 @@ git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git remote add upstream $upstream
 
-git fetch upstream
-git fetch upstream --tags
+git fetch --all
+git fetch --tags
 git remote -v
 
 for branch in $branches
