@@ -1,0 +1,24 @@
+name: "Sync Fork"
+description: "Sync changes from upstream into fork"
+author: "Marc Anton Dahmen"
+inputs:
+  upstream:
+    description: "The URL of the upstream repository"
+    required: true
+  branches:
+    description: "A list of branches to be synched, separated by a space"
+    required: false
+    default: "master"
+  token:
+    description: "The auth token with write access"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.upstream }}
+    - ${{ inputs.branches }}
+    - ${{ inputs.token }}
+branding:
+  icon: "git-merge"
+  color: "gray-dark"
